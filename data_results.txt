@@ -1,0 +1,148 @@
+Summary:
+The file contains Customer Shopping Data which encompasses shopping trends. The abstracted portion of the data analysis is included here to be further analyzed by LLMs to generate reports. Quick analysis of this data is crucial for faster decision-making on the client's side. This summary includes descriptions of data, feature types, feature correlations, statistical tests on univariate features, facts and cubes, and visualizations.
+
+Description of the Data:
+Value:
+{'Age': {'count': 1000.0, 'mean': 41.392, 'std': 13.681429659122527, 'min': 18.0, '25%': 29.0, '50%': 42.0, '75%': 53.0, 'max': 64.0}, 'Quantity': {'count': 1000.0, 'mean': 2.514, 'std': 1.1327343409145356, 'min': 1.0, '25%': 1.0, '50%': 3.0, '75%': 4.0, 'max': 4.0}, 'Price per Unit': {'count': 1000.0, 'mean': 179.89, 'std': 189.68135627129232, 'min': 25.0, '25%': 30.0, '50%': 50.0, '75%': 300.0, 'max': 500.0}, 'Total Amount': {'count': 1000.0, 'mean': 456.0, 'std': 559.997631555123, 'min': 25.0, '25%': 60.0, '50%': 135.0, '75%': 900.0, 'max': 2000.0}}
+Description:
+A summary of the dataset, including its source, context of data collection, the period covered, and the main variables included. This overview provides the structure and content of the data.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Data Types of Features:
+Value:
+{'Date': dtype('O'), 'Gender': dtype('O'), 'Age': dtype('int64'), 'Product Category': dtype('O'), 'Quantity': dtype('int64'), 'Price per Unit': dtype('int64'), 'Total Amount': dtype('int64')}
+Description:
+Information about the data types of each feature (column) in the dataset. This includes whether a feature is numerical, categorical, date-time, etc., and highlights any discrepancies that may need to be addressed (e.g., a date column stored as an object).
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Statistical Results:
+Value:
+{'Age Shapiro test': ShapiroResult(statistic=0.9524148791153523, pvalue=1.8233998212466617e-17), 'Quantity Shapiro test': ShapiroResult(statistic=0.8518440340605313, pvalue=1.352229708237354e-29), 'Price per Unit Shapiro test': ShapiroResult(statistic=0.7236211491395679, pvalue=1.055230568069523e-37), 'Total Amount Shapiro test': ShapiroResult(statistic=0.7489105489094288, pvalue=2.1785847545499362e-36), 'chi-square contigency test': [' feature 1:Date and feature 2: Gender\n        Chi-Square Statistic: 350.2357653017917\n        p-value: 0.39677766348306787\n        Degrees of freedom:344\n        Expected frequencies:[[1.53 1.47]\n [2.04 1.96]\n [0.51 0.49]\n [1.53 1.47]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [1.02 0.98]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [2.04 1.96]\n [2.04 1.96]\n [1.53 1.47]\n [1.02 0.98]\n [2.04 1.96]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [0.51 0.49]\n [2.04 1.96]\n [1.53 1.47]\n [1.53 1.47]\n [0.51 0.49]\n [2.04 1.96]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [4.08 3.92]\n [2.04 1.96]\n [2.04 1.96]\n [2.04 1.96]\n [0.51 0.49]\n [1.53 1.47]\n [2.55 2.45]\n [0.51 0.49]\n [2.04 1.96]\n [1.02 0.98]\n [0.51 0.49]\n [3.06 2.94]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [2.55 2.45]\n [0.51 0.49]\n [2.04 1.96]\n [2.04 1.96]\n [0.51 0.49]\n [2.04 1.96]\n [2.04 1.96]\n [1.53 1.47]\n [0.51 0.49]\n [2.55 2.45]\n [0.51 0.49]\n [1.02 0.98]\n [2.04 1.96]\n [2.04 1.96]\n [0.51 0.49]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [0.51 0.49]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [2.55 2.45]\n [2.04 1.96]\n [2.55 2.45]\n [2.04 1.96]\n [1.02 0.98]\n [2.04 1.96]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [0.51 0.49]\n [0.51 0.49]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [2.55 2.45]\n [3.06 2.94]\n [1.02 0.98]\n [0.51 0.49]\n [2.55 2.45]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [0.51 0.49]\n [2.04 1.96]\n [3.06 2.94]\n [2.55 2.45]\n [1.02 0.98]\n [1.53 1.47]\n [3.57 3.43]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [2.55 2.45]\n [1.53 1.47]\n [2.55 2.45]\n [2.55 2.45]\n [2.55 2.45]\n [3.06 2.94]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [5.61 5.39]\n [1.53 1.47]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [2.04 1.96]\n [4.59 4.41]\n [0.51 0.49]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [0.51 0.49]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [2.04 1.96]\n [1.02 0.98]\n [2.04 1.96]\n [1.02 0.98]\n [1.02 0.98]\n [1.53 1.47]\n [2.04 1.96]\n [2.55 2.45]\n [0.51 0.49]\n [0.51 0.49]\n [0.51 0.49]\n [1.02 0.98]\n [1.02 0.98]\n [1.53 1.47]\n [0.51 0.49]\n [2.55 2.45]\n [1.02 0.98]\n [1.02 0.98]\n [2.04 1.96]\n [1.02 0.98]\n [2.55 2.45]\n [0.51 0.49]\n [1.53 1.47]\n [0.51 0.49]\n [0.51 0.49]\n [1.53 1.47]\n [1.02 0.98]\n [2.04 1.96]\n [1.02 0.98]\n [0.51 0.49]\n [2.04 1.96]\n [1.53 1.47]\n [1.02 0.98]\n [2.04 1.96]\n [1.02 0.98]\n [0.51 0.49]\n [0.51 0.49]\n [5.1  4.9 ]\n [1.02 0.98]\n [1.02 0.98]\n [1.02 0.98]\n [2.04 1.96]\n [0.51 0.49]\n [1.02 0.98]\n [0.51 0.49]\n [2.55 2.45]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [2.55 2.45]\n [1.02 0.98]\n [1.02 0.98]\n [0.51 0.49]\n [1.53 1.47]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [4.08 3.92]\n [1.02 0.98]\n [1.02 0.98]\n [2.04 1.96]\n [2.04 1.96]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [1.02 0.98]\n [1.02 0.98]\n [3.06 2.94]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [0.51 0.49]\n [3.06 2.94]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [2.04 1.96]\n [1.53 1.47]\n [2.04 1.96]\n [2.55 2.45]\n [2.04 1.96]\n [1.53 1.47]\n [0.51 0.49]\n [0.51 0.49]\n [1.02 0.98]\n [2.55 2.45]\n [1.53 1.47]\n [2.04 1.96]\n [1.53 1.47]\n [0.51 0.49]\n [1.02 0.98]\n [0.51 0.49]\n [0.51 0.49]\n [0.51 0.49]\n [1.53 1.47]\n [2.55 2.45]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [1.02 0.98]\n [0.51 0.49]\n [1.02 0.98]\n [1.53 1.47]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [1.02 0.98]\n [1.53 1.47]\n [2.55 2.45]\n [2.55 2.45]\n [3.06 2.94]\n [1.02 0.98]\n [0.51 0.49]\n [2.04 1.96]\n [1.02 0.98]\n [1.53 1.47]\n [2.04 1.96]\n [3.57 3.43]\n [1.53 1.47]\n [1.53 1.47]\n [1.02 0.98]\n [1.53 1.47]\n [2.04 1.96]\n [1.02 0.98]\n [1.02 0.98]\n [2.04 1.96]\n [0.51 0.49]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [2.04 1.96]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [3.06 2.94]\n [0.51 0.49]\n [1.53 1.47]\n [2.04 1.96]\n [3.06 2.94]\n [0.51 0.49]\n [0.51 0.49]\n [1.02 0.98]\n [1.02 0.98]\n [3.06 2.94]\n [1.02 0.98]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [1.02 0.98]\n [2.04 1.96]\n [1.53 1.47]\n [0.51 0.49]\n [2.04 1.96]\n [1.53 1.47]\n [1.02 0.98]\n [0.51 0.49]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [1.53 1.47]\n [1.02 0.98]\n [1.53 1.47]\n [1.53 1.47]\n [1.02 0.98]\n [1.53 1.47]\n [0.51 0.49]\n [2.04 1.96]\n [2.55 2.45]\n [2.55 2.45]\n [1.02 0.98]\n [2.04 1.96]\n [3.06 2.94]\n [2.04 1.96]\n [1.02 0.98]\n [1.02 0.98]\n [1.53 1.47]\n [1.02 0.98]\n [1.02 0.98]\n [1.53 1.47]\n [1.02 0.98]\n [2.04 1.96]\n [1.53 1.47]\n [2.55 2.45]\n [0.51 0.49]\n [0.51 0.49]\n [3.06 2.94]\n [1.02 0.98]\n [0.51 0.49]\n [3.06 2.94]\n [1.02 0.98]\n [1.53 1.47]\n [2.04 1.96]\n [0.51 0.49]\n [1.02 0.98]]\nFail to reject H0 due to lack of evidence under significance level 0.05 Date & Gender are independent.', ' feature 1:Date and feature 2: Product Category\n        Chi-Square Statistic: 692.8037821426967\n        p-value: 0.4415012638703612\n        Degrees of freedom:688\n        Expected frequencies:[[0.921 1.053 1.026]\n [1.228 1.404 1.368]\n [0.307 0.351 0.342]\n ...\n [1.228 1.404 1.368]\n [0.307 0.351 0.342]\n [0.614 0.702 0.684]]\nFail to reject H0 due to lack of evidence under significance level 0.05 Date & Product Category are independent.', ' feature 1:Gender and feature 2: Product Category\n        Chi-Square Statistic: 1.673837085800602\n        p-value: 0.43304287262068974\n        Degrees of freedom:2\n        Expected frequencies:[[156.57 179.01 174.42]\n [150.43 171.99 167.58]]\nFail to reject H0 due to lack of evidence under significance level 0.05 Gender & Product Category are independent.'], 'Date Chi Square test': {'Chi2 Statistic': 293.05999999999995, 'p-value': 0.9783820452081666}, 'Gender Chi Square test': {'Chi2 Statistic': 0.4, 'p-value': 0.5270892568655381}, 'Product Category Chi Square test': {'Chi2 Statistic': 3.242, 'p-value': 0.1977008993009057}}
+Description:
+Results of statistical tests applied to the dataset. This includes Chi-square tests for categorical variables to check for independence and Shapiro-Wilk tests for normality of numerical features, providing insights into the distribution of the data.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Correlation of Features:
+Value:
+      Age  Quantity  Price per Unit  Total Amount
+ 1.000000 -0.023737       -0.038423     -0.060568
+-0.023737  1.000000        0.017501      0.373707
+-0.038423  0.017501        1.000000      0.851925
+-0.060568  0.373707        0.851925      1.000000
+Description:
+Correlation matrix showing the pairwise correlation coefficients between numerical features. High correlation values (positive or negative) indicate strong relationships, which can be crucial for feature selection and understanding interactions.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Data Facts and Cubes:
+Value:
+{}
+Description:
+Aggregated data summaries, including key metrics and dimensions used for analyzing patterns and trends. Facts and cubes provide a multi-dimensional view of the data, facilitating in-depth analysis and insights.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Stacked Bar Visualizations:
+Value:
+{}
+Description:
+Stacked bar charts visualizing the distribution of categorical data across different segments. These visualizations help in understanding the composition and relative proportions of different categories.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Histogram Visualization:
+Value:
+{'histAge': {'counts': array([253,   0,   0, 243,   0,   0, 241,   0,   0, 263], dtype=int64), 'bin_edges': array([1. , 1.3, 1.6, 1.9, 2.2, 2.5, 2.8, 3.1, 3.4, 3.7, 4. ])}, 'histQuantity': {'counts': array([253,   0,   0, 243,   0,   0, 241,   0,   0, 263], dtype=int64), 'bin_edges': array([1. , 1.3, 1.6, 1.9, 2.2, 2.5, 2.8, 3.1, 3.4, 3.7, 4. ])}, 'histPrice per Unit': {'counts': array([253,   0,   0, 243,   0,   0, 241,   0,   0, 263], dtype=int64), 'bin_edges': array([1. , 1.3, 1.6, 1.9, 2.2, 2.5, 2.8, 3.1, 3.4, 3.7, 4. ])}, 'histTotal Amount': {'counts': array([253,   0,   0, 243,   0,   0, 241,   0,   0, 263], dtype=int64), 'bin_edges': array([1. , 1.3, 1.6, 1.9, 2.2, 2.5, 2.8, 3.1, 3.4, 3.7, 4. ])}}
+Description:
+Histograms showing the distribution of numerical features. These visualizations are useful for identifying skewness, outliers, and the general shape of the data distribution.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Pie Visualization:
+Value:
+{'ctplot Gender.png': {'Female': 510, 'Male': 490}, 'ctplot Product Category.png': {'Clothing': 351, 'Electronics': 342, 'Beauty': 307}, 'pie Quantity.png': {4: 263, 1: 253, 2: 243, 3: 241}, 'pie Price per Unit.png': {50: 211, 25: 210, 500: 199, 300: 197, 30: 183}}
+Description:
+Pie charts displaying the proportion of different categories within a feature. This visualization is helpful for understanding the relative frequency of categories and their distribution.
+Note:
+Each key in the value data corresponds to the particular saved figure file name
+
+Outliers:
+Value:
+      Date Gender  Age Product Category  Quantity  Price per Unit  Total Amount  outlier
+2023-01-14 Female   50           Beauty         1             500           500        1
+2023-01-23 Female   54      Electronics         2             500          1000        1
+2023-05-31 Female   26         Clothing         3             300           900        1
+2023-08-25 Female   51      Electronics         4              30           120        1
+2023-01-29   Male   32         Clothing         2             300           600        1
+2023-01-17 Female   59         Clothing         1              25            25        1
+2023-07-25 Female   22      Electronics         1             500           500        1
+2023-10-18 Female   34      Electronics         4             500          2000        1
+2023-04-19 Female   34      Electronics         3             500          1500        1
+2023-03-15   Male   19      Electronics         2             500          1000        1
+2023-07-15 Female   59           Beauty         3             500          1500        1
+2023-09-30 Female   32         Clothing         3             300           900        1
+2023-06-09   Male   21         Clothing         3             500          1500        1
+2023-01-31 Female   23      Electronics         2             500          1000        1
+2023-02-04 Female   50           Beauty         2             500          1000        1
+2023-01-17 Female   39           Beauty         1             500           500        1
+2023-05-23 Female   47      Electronics         3             300           900        1
+2023-05-23 Female   29           Beauty         4             500          2000        1
+2023-08-23 Female   19           Beauty         1             500           500        1
+2023-03-01 Female   64           Beauty         2              30            60        1
+2023-10-11 Female   62         Clothing         1             300           300        1
+2023-04-15 Female   64           Beauty         1             500           500        1
+2023-01-23 Female   22         Clothing         4             500          2000        1
+2023-08-07 Female   43      Electronics         3             300           900        1
+2023-01-05 Female   60      Electronics         2             500          1000        1
+2023-10-14   Male   57      Electronics         2              30            60        1
+2023-05-17 Female   57         Clothing         2             500          1000        1
+2023-07-15 Female   26         Clothing         3             500          1500        1
+2023-06-18 Female   51      Electronics         3             300           900        1
+2023-05-23 Female   60      Electronics         3             300           900        1
+2023-03-01 Female   60           Beauty         4              25           100        1
+2023-01-20   Male   24           Beauty         1              50            50        1
+2023-06-26 Female   37      Electronics         3             300           900        1
+2023-07-17 Female   49         Clothing         3             300           900        1
+2023-01-01   Male   46           Beauty         3             500          1500        1
+2023-09-24 Female   62      Electronics         1             300           300        1
+2023-11-16   Male   19      Electronics         3             500          1500        1
+2023-12-08 Female   46      Electronics         3             300           900        1
+2023-06-14 Female   25         Clothing         3             300           900        1
+2023-10-22 Female   59           Beauty         2             500          1000        1
+2023-09-11 Female   29      Electronics         4              50           200        1
+2023-08-06 Female   61      Electronics         1             500           500        1
+2023-10-14   Male   57         Clothing         1              50            50        1
+2023-08-17 Female   63      Electronics         3             300           900        1
+2023-03-23 Female   21           Beauty         3             500          1500        1
+2024-01-01   Male   55      Electronics         1              30            30        1
+2023-12-23 Female   60      Electronics         3             300           900        1
+2023-10-22 Female   53         Clothing         3             300           900        1
+2023-06-30 Female   28         Clothing         2             500          1000        1
+2023-11-05 Female   52         Clothing         3             300           900        1
+2023-07-21 Female   19      Electronics         2             500          1000        1
+2023-02-12 Female   18         Clothing         1             500           500        1
+2023-06-29 Female   33         Clothing         1              50            50        1
+2023-07-12   Male   26      Electronics         1              30            30        1
+2023-05-05 Female   56      Electronics         2             500          1000        1
+2023-11-04 Female   34      Electronics         1             500           500        1
+2023-04-01   Male   33           Beauty         4             500          2000        1
+2023-09-25 Female   62           Beauty         2              50           100        1
+2023-09-05 Female   59         Clothing         1             500           500        1
+2023-08-06 Female   51      Electronics         4             500          2000        1
+2023-09-03   Male   25      Electronics         1             300           300        1
+2023-10-23 Female   62           Beauty         1             500           500        1
+2023-12-18 Female   46      Electronics         1             300           300        1
+2023-09-25 Female   50      Electronics         3             300           900        1
+2023-11-17 Female   48         Clothing         3             300           900        1
+2023-04-19 Female   40         Clothing         3             300           900        1
+2023-01-17 Female   49         Clothing         2             500          1000        1
+2023-04-29 Female   30         Clothing         3             300           900        1
+2023-05-25 Female   58           Beauty         2             500          1000        1
+Description:
+Here it contains the potential outliers of the data , abnormal behaviour of the data
+Note:
+it contains the data pints which are outliers please intrepret the those points in useful analysis
+
